@@ -27,7 +27,7 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
       client_id: client1._id,
       title: "GST Filing",
       category: "Tax",
-      due_date: new Date("2026-03-10"),
+      due_date: new Date("2026-02-10"),
     },
     {
       client_id: client1._id,
