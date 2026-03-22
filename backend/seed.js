@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
-require("dotenv").config();
-
 import Client from "./models/Client.js";
 import Task from "./models/Task.js";
+import dotenv from "dotenv";
+dotenv.config();
+import dns from "dns";
 
+dns.setServers(["1.1.1.1" ,"8.8.8.8"]);
 mongoose.connect(process.env.MONGO_URI).then(async () => {
   await Client.deleteMany();
   await Task.deleteMany();

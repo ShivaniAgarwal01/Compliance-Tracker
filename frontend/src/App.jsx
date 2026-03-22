@@ -27,8 +27,7 @@ function App() {
   };
 
   return (
-    <div className="flex h-screen">
-      
+    <div className="flex h-screen bg-gray-50 font-sans">
       {/* Sidebar */}
       <ClientList
         clients={clients}
@@ -39,10 +38,10 @@ function App() {
       />
 
       {/* Main */}
-      <div className="flex-1 p-6">
+      <div className="flex-1 p-8 overflow-y-auto">
         {selectedClient ? (
           <>
-            <h1 className="text-2xl font-bold mb-4">
+            <h1 className="text-3xl font-bold text-gray-900 mb-6">
               {selectedClient.company_name}
             </h1>
 
