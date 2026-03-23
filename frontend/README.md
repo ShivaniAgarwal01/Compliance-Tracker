@@ -1,16 +1,187 @@
-# React + Vite
+# 🚀 Compliance Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application to manage clients and track their compliance tasks efficiently.
+Built with a focus on clean UI, real-time updates, and scalable architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+🔗 https://compliance-tracker-rho.vercel.app/
+🔗 https://compliance-tracker-lf68.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 👥 Client Management
+
+* View all clients
+* Select a client to view associated tasks
+* Real-time client search 🔍
+* Sort clients (A-Z / Z-A)
+
+### ✅ Task Management
+
+* Add compliance tasks for each client
+* View all tasks with filters
+* Filter by:
+
+  * Status
+  * Category
+* Sort tasks by due date
+
+### 📊 Dashboard Insights
+
+* Total Tasks
+* Pending Tasks
+* Overdue Tasks ⚠️
+
+### 🎨 UI/UX
+
+* Minimalistic and clean design
+* Responsive layout
+* Sidebar + main content structure
+* Smooth user interactions
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Tailwind CSS
+* JavaScript
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB (Mongoose)
+
+### Deployment
+
+* Frontend: Vercel
+* Backend: Render
+* Database: MongoDB Atlas
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/ShivaniAgarwal01/Compliance-Tracker.git
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+Run server:
+
+```bash
+npm run dev
+```
+
+---
+
+### 3️⃣ Seed Initial Data (Important)
+
+```bash
+node seed.js
+```
+
+This will:
+
+* Add sample clients
+* Add sample tasks
+
+---
+
+### 4️⃣ Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 📂 Project Structure
+
+```
+compliance-tracker/
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/    
+│   ├── models/
+│   ├── routes/
+│   ├── index.js
+│   └── seed.js
+│
+├── frontend/
+│   ├── components/ 
+│   ├── App.jsx
+│   └── api.js
+│   └── main.jsx
+```
+
+---
+
+## 🧠 Key Concepts Used
+
+* REST API Design
+* State Management using React Hooks
+* Component-based architecture
+* Client-side filtering & sorting
+* MongoDB schema design
+* Async/Await for API handling
+
+---
+
+## 🚀 Future Improvements
+
+* Task status toggle (Complete / Pending)
+* Notifications & alerts 🔔
+* Charts & analytics dashboard 📈
+* Authentication (Login/Signup)
+* Role-based access control
+
+---
+
+## 👩‍💻 Author
+
+**Shivani Agarwal**
+B.Tech CSE, LNMIIT Jaipur
+
+* 💻 Full Stack Developer
+* 🎨 UI/UX Designer
+
+---
+
+
+## 📬 Feedback
+
+If you have suggestions or feedback, feel free to connect!
+
+---
