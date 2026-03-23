@@ -18,28 +18,28 @@ function TaskForm({ clientId, refresh }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}  className="bg-white p-4 rounded-xl shadow-sm flex flex-wrap gap-3 mb-6">
+    <form onSubmit={handleSubmit}  className="bg-gray-900 p-4 rounded-xl border border-gray-800 flex flex-wrap gap-3 mb-6">
+
       <input
         placeholder="Title"
         value={form.title}
         onChange={(e) => setForm({ ...form, title: e.target.value })}
-        className="border rounded-lg px-3 py-2 flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
-
+        className="bg-gray-800 border border-gray-700 text-gray-200 rounded-lg px-3 py-2 flex-1"
       />
       <input
         placeholder="Category"
         value={form.category}
         onChange={(e) => setForm({ ...form, category: e.target.value })}
-         className="border rounded-lg px-3 py-2"
+         className="bg-gray-800 border border-gray-700 text-gray-200 rounded-lg px-3 py-2"
       />
       <input
         type="date"
         value={form.due_date}
         onChange={(e) => setForm({ ...form, due_date: e.target.value })}
-        className="border rounded-lg px-3 py-2"
+        className="bg-gray-800 border border-gray-700 text-gray-200 rounded-lg px-3 py-2"
       />
 
-      <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">
+      <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">
         Add Task
       </button>
     </form>

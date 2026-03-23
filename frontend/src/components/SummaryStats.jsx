@@ -16,29 +16,24 @@ function SummaryStats({ tasks }) {
   return (
     <div className="grid grid-cols-3 gap-4 mb-6">
       
-      {/* Total */}
-      <div className="bg-blue-50 p-4 rounded-xl shadow-sm border">
-        <p className="text-gray-500 text-sm">📋 Total Tasks</p>
-        <h2 className="text-2xl font-bold text-gray-900">
-          {totalTasks}
-        </h2>
-      </div>
+      <div className="bg-gray-900 p-4 rounded-xl border border-gray-800">
+    <p className="text-gray-400 text-sm">Total Tasks</p>
+    <h2 className="text-2xl font-semibold">{totalTasks}</h2>
+  </div>
 
-      {/* Pending */}
-      <div className="bg-yellow-50 p-4 rounded-xl shadow-sm border">
-        <p className="text-gray-500 text-sm">⏳ Pending</p>
-        <h2 className="text-2xl font-bold text-yellow-600">
-          {pendingTasks}
-        </h2>
-      </div>
+     <div className="bg-gray-900 p-4 rounded-xl border border-gray-800">
+    <p className="text-gray-400 text-sm">Pending</p>
+    <h2 className="text-2xl font-semibold text-yellow-400">
+      {pendingTasks}
+    </h2>
+  </div>
 
-      {/* Overdue */}
-      <div className="bg-red-50 p-4 rounded-xl shadow-sm border">
-        <p className="text-gray-500 text-sm">⚠️ Overdue</p>
-        <h2 className="text-2xl font-bold text-red-600">
-          {overdueTasks}
-        </h2>
-      </div>
+      <div className="bg-gray-900 p-4 rounded-xl border border-gray-800">
+    <p className="text-gray-400 text-sm">Overdue</p>
+    <h2 className="text-2xl font-semibold text-red-400">
+      {overdueTasks}
+    </h2>
+  </div>
 
     </div>
   );

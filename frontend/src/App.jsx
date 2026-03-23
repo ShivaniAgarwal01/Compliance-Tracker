@@ -52,33 +52,33 @@ function App() {
   });
 
   return (
-    <div className="h-screen bg-gray-50 font-sans flex flex-col">
+    <div className="h-screen bg-gray-950 text-gray-100 flex flex-col">
       {/*  TOP HEADER */}
-      <div className="flex justify-between items-center px-8 py-4 bg-white shadow-sm">
-        <h1 className="text-2xl font-bold text-gray-900">Compliance Tracker</h1>
-
+      <div className="flex justify-between items-center px-8 py-4 bg-gray-900 border-b border-gray-700 backdrop-blur-md">
+          <h1 className="text-2xl font-semibold tracking-tight">Compliance Tracker</h1>
+        <div className="flex items-center gap-4">
         <div className="relative">
           <input
             type="text"
             placeholder="Search clients..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="border rounded-lg px-10 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <span className="absolute left-3 top-2.5 text-gray-400">🔍</span>
+            className="bg-gray-800 text-gray-200 placeholder-gray-500 border border-gray-700 rounded-lg px-10 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+   />
+          <span className="absolute left-3 top-2.5 text-gray-500">🔍</span>
         </div>
         <select
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
-          className="border rounded-lg px-3 py-2 ml-4"
+          className="border bg-gray-800 border-gray-700 text-gray-200 rounded-lg px-3 py-2 ml-4"
         >
           <option value="name-asc">Name A-Z</option>
           <option value="name-desc">Name Z-A</option>
         </select>
       </div>
-
+    </div>
       {/*  MAIN LAYOUT */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden ">
         {/* Sidebar */}
         <ClientList
           clients={filteredClients}
@@ -89,15 +89,14 @@ function App() {
         />
 
         {/* Main Content */}
-        <div className="flex-1 p-8 overflow-y-auto">
+        <div className="flex-1 p-8 overflow-y-auto bg-gray-950">
           {selectedClient ? (
             <>
-              <h1 className="text-3xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl font-bold text-gray-100 mb-6">
                 {selectedClient.company_name}
               </h1>
 
               <SummaryStats tasks={tasks} />
-              
               <TaskForm
                 clientId={selectedClient._id}
                 refresh={() => fetchTasks(selectedClient._id)}
@@ -105,11 +104,12 @@ function App() {
 
               <Filters filters={filters} setFilters={setFilters} />
 
-              <div className="flex justify-end mb-4">
+              <div className="flex justify-between items-center mb-4">
+          <p className="text-sm text-gray-400 tracking-wide uppercase">Tasks</p>
                 <select
                   value={taskSort}
                   onChange={(e) => setTaskSort(e.target.value)}
-                  className="border rounded-lg px-3 py-2"
+                  className="bg-gray-800 border border-gray-700 text-gray-200 rounded-lg px-3 py-2"
                 >
                   <option value="date-asc">Due Date ↑</option>
                   <option value="date-desc">Due Date ↓</option>
@@ -122,9 +122,11 @@ function App() {
               />
             </>
           ) : (
+            <div className="flex items-center justify-center h-full">
             <p className="text-gray-500 text-lg">
               Select a client to view tasks
             </p>
+            </div>
           )}
         </div>
       </div>
