@@ -1,4 +1,4 @@
-const BASE_URL = "https://compliance-tracker-lf68.onrender.com";
+const BASE_URL = "https://compliance-tracker-lf68.onrender.com/api";
 
 export const getClients = async () => {
   const res = await fetch(`${BASE_URL}/clients`);
